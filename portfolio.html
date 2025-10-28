@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alex Chen - Video Editor Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="logo">
+          <span class="logo-text">SUJAN</span>
+          <span class="logo-accent">PARIYAR</span>
+        </div>
+        <div class="nav-menu">
+          <a href="#home" class="nav-link">Home</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#portfolio" class="nav-link">Portfolio</a>
+          <a href="#services" class="nav-link">Services</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </div>
+        <div class="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-bg">
+        <video autoplay muted loop>
+          <source
+            src="https://player.vimeo.com/external/371433846.sd.mp4?s=236da2f3c0fd273d2c6d9a064f3ae35579b2bbdf&profile_id=139&oauth2_token_id=57447761"
+            type="video/mp4"
+          />
+        </video>
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1 class="hero-title">
+            <span class="title-line">CINEMATIC</span>
+            <span class="title-line">VIDEO EDITOR</span>
+          </h1>
+          <p class="hero-subtitle">
+            Crafting visual stories that captivate audiences and bring brands to
+            life through the art of video editing
+          </p>
+          <div class="hero-stats">
+            <div class="stat">
+              <span class="stat-number">20+</span>
+              <span class="stat-label">Projects</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">1+</span>
+              <span class="stat-label">Years</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">5+</span>
+              <span class="stat-label">Clients</span>
+            </div>
+          </div>
+          <div class="hero-buttons">
+            <button class="btn-primary">
+              <span>View My Work</span>
+              <i class="fas fa-arrow-right"></i>
+            </button>
+            <button class="btn-play">
+              <i class="fas fa-play"></i>
+              <span>Watch Reel</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="about-content">
+          <div class="about-text">
+            <h2 class="section-title">About Me</h2>
+            <p class="about-description">
+              I'm a passionate video editor with over 1 years of experience
+              creating compelling visual narratives. From corporate videos to
+              music videos, documentaries to commercials, I bring stories to
+              life through the power of editing.
+            </p>
+            <div class="skills">
+              <div class="skill">
+                <span class="skill-name">Adobe Premiere Pro</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-width="75%"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <span class="skill-name">After Effects</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-width="70%"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <span class="skill-name">DaVinci Resolve</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-width="75%"></div>
+                </div>
+              </div>
+              <div class="skill">
+                
+              </div>
+            </div>
+          </div>
+          <div class="about-image">
+            <img
+              src="pic.jpg"
+              alt="handsome boy"
+            />
+            <div class="image-overlay"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+        <h2 class="section-title">Featured Work</h2>
+        <div class="portfolio-filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="documentary">
+            Documentary
+          </button>
+          <button class="filter-btn" data-filter="corporate">Reels</button>
+        </div>
+        <div class="portfolio-grid" id="portfolioGrid">
+          <!-- Portfolio items will be populated by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+      <div class="container">
+        <h2 class="section-title">Services</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-cut"></i>
+            </div>
+            <h3>Video Editing</h3>
+            <p>
+              Professional video editing with attention to pacing, storytelling,
+              and visual flow
+            </p>
+            <ul>
+              <li>Multi-camera editing</li>
+              <li>Color correction</li>
+              <li>Audio synchronization</li>
+              <li>Transitions & effects</li>
+            </ul>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-palette"></i>
+            </div>
+            <h3>Color Grading</h3>
+            <p>Cinematic color grading to enhance mood and visual aesthetics</p>
+            <ul>
+              <li>LUT creation</li>
+              <li>Skin tone correction</li>
+              <li>Mood enhancement</li>
+              <li>Brand consistency</li>
+            </ul>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-magic"></i>
+            </div>
+            <h3>Motion Graphics</h3>
+            <p>
+              Dynamic motion graphics and visual effects to elevate your content
+            </p>
+            <ul>
+              <li>Title animations</li>
+              <li>Logo reveals</li>
+              <li>Lower thirds</li>
+              <li>Visual effects</li>
+            </ul>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-volume-up"></i>
+            </div>
+            <h3>Audio Post</h3>
+            <p>
+              Professional audio editing and sound design for immersive
+              experiences
+            </p>
+            <ul>
+              <li>Audio cleanup</li>
+              <li>Sound design</li>
+              <li>Music mixing</li>
+              <li>Voiceover editing</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+      <div class="container">
+        <h2 class="section-title">What Clients Say</h2>
+        <div class="testimonials-slider">
+          <div class="testimonial active">
+            <div class="testimonial-content">
+              <p>
+                "Sujan's editing skills are exceptional. He transformed our raw
+                footage into a compelling brand story that exceeded our
+                expectations."
+              </p>
+              <div class="testimonial-author">
+                <img
+                  src="don.jpg"
+                  alt="Client"
+                />
+                <div>
+                  <h4>Aashik Gautam</h4>
+                  <span>SciencEpic Nepal</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial">
+            <div class="testimonial-content">
+              <p>
+                "Working with Sujan was a game-changer for our documentry video. His
+                creative vision and technical expertise brought our video to
+                life."
+              </p>
+              <div class="testimonial-author">
+                <img
+                  src="112.jpeg"
+                  alt="Client"
+                />
+                <div>
+                  <h4>Aashik Gautam</h4>
+                  <span>Youtuber</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="contact-content">
+          <div class="contact-info">
+            <h2 class="section-title">Let's Create Something Amazing</h2>
+            <p>
+              Ready to bring your vision to life? Let's discuss your project and
+              create something extraordinary together.
+            </p>
+            <div class="contact-details">
+              <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <span>sujanpariyar40@gmail.com</span>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <span>+977 9825148631</span>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Pokhara, Nepal</span>
+              </div>
+            </div>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+              <a href="#"><i class="fab fa-vimeo-v"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+          <form class="contact-form">
+            <div class="form-group">
+              <input type="text" placeholder="Your Name" required />
+            </div>
+            <div class="form-group">
+              <input type="email" placeholder="Your Email" required />
+            </div>
+            <div class="form-group">
+              <select required>
+                <option value="">Project Type</option>
+                <option value="commercial">Commercial</option>
+                <option value="music">Music Video</option>
+                <option value="documentary">Documentary</option>
+                <option value="corporate">Corporate</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <textarea
+                placeholder="Tell me about your project"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn-submit">
+              <span>Send Message</span>
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="logo">
+            <span class="logo-text">Sujan</span>
+            <span class="logo-accent">Pariyar</span>
+          </div>
+          <p>&copy; 2025 Sujan Pariyar All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="portfolio.js"></script>
+  </body>
+</html>
