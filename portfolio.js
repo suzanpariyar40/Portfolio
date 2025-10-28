@@ -4,7 +4,7 @@ const portfolioData = [
         id: 1,
         title: "Nikola Tesla Documentry",
         category: "documentry",
-        image: "/exposed!.jpg",
+        image: "exposed!.jpg",
         description: "Documentry on Nikola Tesla for SciencEpic Nepal"
     },
     {
