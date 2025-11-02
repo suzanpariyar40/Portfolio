@@ -1,60 +1,29 @@
-// Portfolio data
+// Portfolio data with YouTube links
 const portfolioData = [
     {
         id: 1,
-        title: "Nikola Tesla Documentry",
-        category: "documentry",
+        title: "Nikola Tesla Documentary",
+        category: "documentary",
+        youtubeId: "4l_NMr7TrWs",
         image: "exposed!.jpg",
-        description: "Documentry on Nikola Tesla for SciencEpic Nepal"
+        description: "Documentary on Nikola Tesla for SciencEpic Nepal"
     },
+   
     {
         id: 2,
-        title: "Indie Music Video",
-        category: "music",
-        image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=500&h=300&fit=crop",
-        description: "Artistic music video with creative visual storytelling"
+        title: "HP reel",
+        category: "reels",
+        youtubeId: "TTR2sG80e1Q",
+        image: "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/shorts-logo.2e16d0ba.fill-1440x810.png",
+        description: "Creative music video production"
     },
-    {
+      {
         id: 3,
-        title: "Tech Startup Documentary",
+        title: "Einstein vs Newton",
         category: "documentary",
-        image: "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=500&h=300&fit=crop",
-        description: "Behind-the-scenes look at innovative startup culture"
-    },
-    {
-        id: 4,
-        title: "Corporate Training Video",
-        category: "corporate",
-        image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=500&h=300&fit=crop",
-        description: "Professional training content for enterprise clients"
-    },
-    {
-        id: 5,
-        title: "Fashion Brand Campaign",
-        category: "commercial",
-        image: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=500&h=300&fit=crop",
-        description: "Luxury fashion brand promotional video"
-    },
-    {
-        id: 6,
-        title: "Electronic Music Video",
-        category: "music",
-        image: "https://images.unsplash.com/photo-1571266028243-d220c9c3b0c4?w=500&h=300&fit=crop",
-        description: "Futuristic visuals for electronic music artist"
-    },
-    {
-        id: 7,
-        title: "Environmental Documentary",
-        category: "documentary",
-        image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=500&h=300&fit=crop",
-        description: "Powerful documentary on climate change"
-    },
-    {
-        id: 8,
-        title: "Company Culture Video",
-        category: "corporate",
-        image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=500&h=300&fit=crop",
-        description: "Engaging company culture and values showcase"
+        youtubeId: "tKb0XzWw5Jo",
+        image: "download.jpeg",
+        description: "Creative music video production"
     }
 ];
 
@@ -168,8 +137,7 @@ function createPortfolioItem(item, index) {
     `;
     
     div.addEventListener('click', () => {
-        // Placeholder for video modal
-        console.log(`Playing: ${item.title}`);
+        openVideoModal(item.youtubeId);
     });
     
     return div;
@@ -340,6 +308,53 @@ window.addEventListener('load', () => {
     });
 });
 
+// YouTube Video Modal Functions
+function openVideoModal(youtubeId) {
+    const modal = document.getElementById('videoModal') || createVideoModal();
+    const iframe = modal.querySelector('iframe');
+    
+    iframe.src = `https://www.youtube.com/embed/${youtubeId}?autoplay=1&rel=0`;
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+}
+
+function createVideoModal() {
+    const modal = document.createElement('div');
+    modal.id = 'videoModal';
+    modal.className = 'video-modal';
+    modal.innerHTML = `
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="video-container">
+                <iframe src="" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    `;
+    
+    document.body.appendChild(modal);
+    
+    modal.querySelector('.close-modal').onclick = closeVideoModal;
+    modal.onclick = (e) => {
+        if (e.target === modal) closeVideoModal();
+    };
+    
+    return modal;
+}
+
+function closeVideoModal() {
+    const modal = document.getElementById('videoModal');
+    if (!modal) return;
+    
+    const iframe = modal.querySelector('iframe');
+    iframe.src = '';
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+}
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeVideoModal();
+});
+
 // Mobile menu toggle
 const menuToggle = document.querySelector('.menu-toggle');
 const navMenu = document.querySelector('.nav-menu');
@@ -349,4 +364,22 @@ if (menuToggle && navMenu) {
         navMenu.classList.toggle('active');
         menuToggle.classList.toggle('active');
     });
+}
+
+let viewmywork=document.querySelector(".viewmywork")
+View();
+
+function View(){
+     viewmywork.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetSection = document.querySelector('.portfolio');
+            
+            if (targetSection) {
+                targetSection.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+
 }
