@@ -28,10 +28,10 @@ const portfolioData = [
     },
       {
         id: 4,
-        title: "motion graphics",
+        title: "Motion Graphics",
         category: "documentary",
-        youtubeId: "tKb0XzWw5Jo",
-        image: "download.jpeg",
+        youtubeId: "McC1__bEG5M",
+        image: "Screenshot 2026-01-02 092831.png",
         description: "Creative music video production"
           
     }
