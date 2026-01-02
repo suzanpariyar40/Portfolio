@@ -24,6 +24,16 @@ const portfolioData = [
         youtubeId: "tKb0XzWw5Jo",
         image: "download.jpeg",
         description: "Creative music video production"
+          
+    },
+      {
+        id: 4,
+        title: "motion graphics",
+        category: "documentary",
+        youtubeId: "tKb0XzWw5Jo",
+        image: "download.jpeg",
+        description: "Creative music video production"
+          
     }
 ];
 
