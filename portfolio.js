@@ -17,15 +17,7 @@ const portfolioData = [
         image: "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/shorts-logo.2e16d0ba.fill-1440x810.png",
         description: "Creative music video production"
     },
-      {
-        id: 3,
-        title: "Einstein vs Newton",
-        category: "documentary",
-        youtubeId: "tKb0XzWw5Jo",
-        image: "download.jpeg",
-        description: "Creative music video production"
-          
-    },
+      
       {
         id: 4,
         title: "Motion Graphics",
