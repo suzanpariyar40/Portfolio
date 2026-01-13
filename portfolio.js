@@ -53,7 +53,7 @@ const portfolioData = [
         image: "Screenshot 2026-01-02 092831.png",
         description: "Creative music video production"
           
-    },
+    }
 ];
 
 // DOM Elements
