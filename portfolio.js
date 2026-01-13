@@ -36,6 +36,24 @@ const portfolioData = [
         description: "Creative music video production"
           
     }
+    {
+        id: 5,
+        title: "Motion Graphics",
+        category: "documentary",
+        youtubeId: "rokmCQ9Zt0k",
+        image: "Screenshot 2026-01-02 092831.png",
+        description: "Creative music video production"
+          
+    },
+    {
+        id: 6,
+        title: "geography of nepal",
+        category: "documentary",
+        youtubeId: "fEnmddAcJFU",
+        image: "Screenshot 2026-01-02 092831.png",
+        description: "Creative music video production"
+          
+    },
 ];
 
 // DOM Elements
