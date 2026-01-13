@@ -19,10 +19,19 @@ const portfolioData = [
     },
       
       {
-        id: 4,
+        id: 3,
         title: "Motion Graphics",
         category: "documentary",
         youtubeId: "McC1__bEG5M",
+        image: "Screenshot 2026-01-02 092831.png",
+        description: "Creative music video production"
+          
+    },
+    {
+        id: 4,
+        title: "client ",
+        category: "documentary",
+        youtubeId: "QfvoqaWZK64",
         image: "Screenshot 2026-01-02 092831.png",
         description: "Creative music video production"
           
