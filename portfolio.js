@@ -50,7 +50,7 @@ const portfolioData = [
         title: "geography of nepal",
         category: "documentary",
         youtubeId: "fEnmddAcJFU",
-        image: "Screenshot 2026-01-02 092831.png",
+        image: "containing World Mapcomp (0-00-00-00).png",
         description: "Creative music video production"
           
     }
