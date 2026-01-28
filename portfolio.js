@@ -53,7 +53,17 @@ const portfolioData = [
         image: "containing World Mapcomp (0-00-00-00).png",
         description: "Creative music video production"
           
+    },
+    {
+        id: 7,
+        title: "3d camera ",
+        category: "documentary",
+        youtubeId: "00DdFBKctIA",
+        image: "containing World Mapcomp (0-00-00-00).png",
+        description: "Creative music video production"
+          
     }
+    
 ];
 
 // DOM Elements
